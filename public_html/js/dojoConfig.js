@@ -71,12 +71,7 @@ if (!window.owfJsPath) {
 }
 
 if (!window.dojoPath) {
-    /**
-     * Specifies path to ESRI JavaScript API. Returns the location hosted on
-     * the Internet by default. When isOffline() is true returns a location
-     * hosted within this webapp.
-     * @global
-     */
+    
     window.dojoPath = (function() {
         var path = "//ajax.googleapis.com/ajax/libs/dojo/1.10.4/";
 
@@ -109,7 +104,6 @@ dojoConfig.hasCache = {
 };
 
 dojoConfig.packages = [
-    // Required by ESRI and its bundled dojo
     { location: window.dojoPath + "dojox", name: "dojox" },
     { location: window.dojoPath + "dgrid", main: "OnDemandGrid", name: "dgrid" },
     { location: window.dojoPath + "dijit", name: "dijit" },
