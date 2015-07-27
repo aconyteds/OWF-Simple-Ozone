@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Simple OWF</title>
+        <style>
+        	html,body{
+        		height:100%;
+        		width:100%;
+        		margin:0;
+        		padding:0;
+        	}
+        </style>
+    	<!-- MUST include dojo configuration before other js and css -->
+    	<script src="js/dojoConfig.js"></script>
+    	<script>
+		    function addCss(src) {
+		        document.writeln('<link rel="stylesheet" href="' + src + '">');
+		    }
+		
+		    function addScript(src) {
+		        document.writeln('<script src="' + src + '"><\/script>');
+		    }
+		    addCss(window.dojoPath + "dijit/themes/claro/claro.css");
+		
+		
+		    // Add OWF widget API
+		    addScript(window.owfJsPath + "owf-widget-" + ((window.isDebug) ? ("debug") : ("min")) + ".js");
+                    addScript(window.dojoPath+"dojo/dojo.js");
+
+		    // Trigger app entry point
+		    addScript("js/src/main.js");
+		</script>
+    </head>
+    <body class="claro">
+    	<div id="Simple_Container"></div>
+    </body>
+</html>
